@@ -3,7 +3,10 @@ it2810-webutvikling-h18-prosjekt-3-016 created by GitHub Classroom
 
 
 Short List:
+
 Tema, formål
+
+finne gode 3party libaries
 
 
 Innhold og funksjonalitet:

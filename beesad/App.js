@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Todo from "./app/components/Todo";
+import Todo from "./Components/Todo";
 
 export default class App extends React.Component {
   render() {

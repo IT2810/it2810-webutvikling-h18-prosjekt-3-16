@@ -1,9 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 import {createBottomTabNavigator} from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import Todo from "./Components/Todo";
 import Home from "./Components/Home";
+import Calender from "./Components/Calender";
 
 
 /*list of icons can be found here: https://material.io/tools/icons/?style=baseline */
@@ -32,13 +33,27 @@ const RootStack = createBottomTabNavigator({
                 )
             })
         },
+        Calender: {
+            screen: Calender,
+            navigationOptions: () => ({
+                tabBarIcon: ({tintColor}) => (
+                    <Icon
+                        name="home"
+                        color={tintColor}
+                        size={24}
+                    />
+                )
+            })
+        },
 
     },
 );
 
 export default class App extends React.Component {
     render() {
-        return <RootStack />;
+        return(
+            <RootStack />
+        );
     }
 }
 

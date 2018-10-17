@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "MLP",
+    "name": "beesad",
     "description": "This project is really great.",
-    "slug": "MLP",
+    "slug": "beesad",
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "platforms": ["ios", "android"],

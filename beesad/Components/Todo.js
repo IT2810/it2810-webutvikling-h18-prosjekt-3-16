@@ -27,7 +27,7 @@ export default class Todo extends React.Component {
       <View style={styles.container}>
 
         <View style={styles.header}>
-          <Text style={styles.headerText}> - NOTER - </Text>
+          <Text style={styles.headerText}> - NOTATER - </Text>
         </View>
 
         <ScrollView style={styles.scrollContainer} >
@@ -46,9 +46,7 @@ export default class Todo extends React.Component {
            </TextInput>
         </View>
         <TouchableOpacity onPress={this.addNote.bind(this)} style={styles.addButton}>
-          <Text style = {styles.addButtonText}> x
-
-          </Text>
+          <Text style = {styles.addButtonText}>+</Text>
         </TouchableOpacity>
       </View>
 
@@ -122,8 +120,8 @@ const styles = StyleSheet.create({
       right:20,
       bottom:90,
       backgroundColor:"#E91E63",
-      width:90,
-      height:90,
+      width:70,
+      height:70,
       borderRadius:50,
       alignItems:"center",
       justifyContent:"center",
@@ -131,7 +129,7 @@ const styles = StyleSheet.create({
     },
   addButtonText : {
       color:"#fff",
-      fontSize: 24,
+      fontSize: 40,
     }
 
 

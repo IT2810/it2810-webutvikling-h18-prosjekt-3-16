@@ -1,6 +1,6 @@
 import {AsyncStorage} from 'react-native';
 ​
-
+//This is a more elegant solution for AsyncStorage across several Components, implementation errors left it unused.
 export const getObjectFromAsyncStorage = (itemName) => {
   return AsyncStorage.getItem(itemName)
   .then(item => {

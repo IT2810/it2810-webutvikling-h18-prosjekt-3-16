@@ -5,6 +5,12 @@ import { Calendar, CalendarList, Agenda } from 'react-native-calendars';
 class Calender extends React.Component {
     render() {
         return (
+            <View style={{
+                flex: 1,
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'stretch',
+            }}>
             <Calendar
                 // Handler which gets executed on day press. Default = undefined
                 onDayPress={(day) => {console.log('selected day', day)}}
@@ -25,6 +31,7 @@ class Calender extends React.Component {
                 // Handler which gets executed when press arrow icon left. It receive a callback can go next month
                 onPressArrowRight={addMonth => addMonth()}
             />
+            </View>
         );
     }
 }

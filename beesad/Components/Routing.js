@@ -38,7 +38,7 @@ const RootStack = createBottomTabNavigator({
             navigationOptions: () => ({
                 tabBarIcon: ({tintColor}) => (
                     <Icon
-                        name="home"
+                        name="event"
                         color={tintColor}
                         size={24}
                     />

@@ -8,7 +8,6 @@ class App extends React.Component {
             <Routing/>
         );
     }
-
 }
 
 const styles = StyleSheet.create({

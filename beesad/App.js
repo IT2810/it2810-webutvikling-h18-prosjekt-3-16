@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import {createBottomTabNavigator} from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import Todo from "./Components/Todo";
+import Pedometer from "./Components/Pedometer";
 import Home from "./Components/Home";
 
 
@@ -40,6 +41,7 @@ export default class App extends React.Component {
     render() {
         return <RootStack />;
     }
+
 }
 
 const styles = StyleSheet.create({

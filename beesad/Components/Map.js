@@ -28,6 +28,9 @@ export default class Map extends React.Component {
     componentDidMount(){
         navigator.geolocation.getCurrentPosition(this.geo_success, this.geo_error, options);
     }
+    componentDidUpdate(){
+        navigator.geolocation.getCurrentPosition(this.geo_success, this.geo_error, options);
+    }
     render() {
         return (
             <View style={styles.container}>

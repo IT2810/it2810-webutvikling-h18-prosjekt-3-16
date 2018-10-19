@@ -7,9 +7,10 @@ export const getObjectFromAsyncStorage = (itemName) => {
     if(item) JSON.parse(item)
     else {
       reject(Error('Empty result'))
-    }
-  ).catch(error => console.log(error))
+    }}
+    ).catch(error => console.log(error))
 }
+
 ​
 export const setObjectInAsyncStorage = (key, value) => {
   const valueString = JSON.stringify(value)

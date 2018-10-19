@@ -18,6 +18,7 @@ exports[`renders correctly 1`] = `
       }
     }
   >
+    // A header to indicate what the page is showing.
     <Text
       accessible={true}
       allowFontScaling={true}
@@ -83,6 +84,7 @@ exports[`renders correctly 1`] = `
       </View>
     </View>
   </View>
+  // A container that allows the user to have more notes than the screen can show.
   <View
     style={
       Object {
@@ -96,6 +98,7 @@ exports[`renders correctly 1`] = `
       }
     }
   >
+    //input field for text to be written to notes. Includes a placeholder to show where to tap.
     <TextInput
       allowFontScaling={true}
       onChangeText={[Function]}
@@ -116,6 +119,7 @@ exports[`renders correctly 1`] = `
       value=""
     />
   </View>
+  //Adds new notes and saves data every time a new note is made.
   <View
     accessible={true}
     isTVSelectable={true}
@@ -142,6 +146,7 @@ exports[`renders correctly 1`] = `
       }
     }
   >
+    //Button to indicate how to save a note.
     <Text
       accessible={true}
       allowFontScaling={true}

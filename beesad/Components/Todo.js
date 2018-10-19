@@ -1,5 +1,5 @@
 import React from 'react';
-import Note from "./Note"
+import Note from "./Note";
 import {
   StyleSheet,
   Text,
@@ -9,7 +9,7 @@ import {
   ScrollView,
   TouchableOpacity,
   AsyncStorage,
-  Linking,
+  Linking
  } from 'react-native';
 
 export default class Todo extends React.Component {
@@ -45,29 +45,30 @@ export default class Todo extends React.Component {
           <Button title="info" onPress={ ()=>{ Linking.openURL('https://wealthandrisk.nz/vapid-goals/')}} />
 
         </View>
-        // A container that allows the user to have more notes than the screen can show.
+          {/* A container that allows the user to have more notes than the screen can show.*/}
+          {/*//calling the earlier map of all Note.js objects*/}
         <ScrollView style={styles.scrollContainer} >
-        //calling the earlier map of all Note.js objects
-        {notes}
+
+            {notes}
 
         </ScrollView>
 
         <View style={styles.footer}>
-        //input field for text to be written to notes. Includes a placeholder to show where to tap.
-            <TextInput styke={styles.textInput}
+            {/*input field for text to be written to notes. Includes a placeholder to show where to tap.*/}
+            {/*Makes sure that all changes in text is stored in the state.*/}
+            {/*//makes the text passable to Note.js*/}
+            <TextInput style={styles.textInput}
             placeholder="            note"
-            //Makes sure that all changes in text is stored in the state.
             onChangeText={(noteText) => this.setState({noteText})}
-            //makes the text passable to Note.js
             value={this.state.noteText}
             placeholderTextColor="black"
             underlineColorAndroid="transparent">
 
            </TextInput>
         </View>
-        //Adds new notes and saves data every time a new note is made.
+        {/*Adds new notes and saves data every time a new note is made.*/}
         <TouchableOpacity onChangeText={this.saveData()} onPress={this.addNote.bind(this)} style={styles.addButton}>
-        //Button to indicate how to save a note.
+            {/*Button to indicate how to save a note.*/}
           <Text style = {styles.addButtonText}>+</Text>
         </TouchableOpacity>
       </View>
@@ -75,7 +76,7 @@ export default class Todo extends React.Component {
     );
 
     }
-    //a barebones AsyncStorage function to save a state as a JSON object.
+    //*a barebones AsyncStorage function to save a state as a JSON object.*/}
     saveData(){
       AsyncStorage.setItem("state",JSON.stringify(this.state));
     }
@@ -131,14 +132,14 @@ const styles = StyleSheet.create({
       left:0,
       right:0,
       zIndex:10,
-      height:50,
+      height:80,
       backgroundColor: "#696969",
     },
   textInput : {
       alignSelf:"stretch",
-      color:"#696969",
+      color:"#fff",
       padding: 20,
-      backgroundColor: "#696969",
+      backgroundColor: "#fff",
       borderTopWidth: 50  ,
       borderTopColor:"#ededed",
       bottom: 70,

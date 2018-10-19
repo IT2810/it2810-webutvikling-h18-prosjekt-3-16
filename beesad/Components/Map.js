@@ -1,11 +1,7 @@
 import React from 'react';
 import {
     StyleSheet,
-    Text,
     View,
-    TextInput,
-    ScrollView,
-    TouchableOpacity,
     geolocation,
 } from 'react-native';
 
@@ -38,8 +34,9 @@ export default class Map extends React.Component {
                 <MapView
                     style={styles.map}
                     initialRegion={{
-                        latitude: 63.4213704,
-                        longitude: 10.3947577,
+                        // this lat and long will be the once in the init state if not changed.
+                        latitude: this.state.lat,
+                        longitude: this.state.lon,
                         latitudeDelta: 0.0922,
                         longitudeDelta: 0.0421,
                     }}
@@ -54,10 +51,7 @@ export default class Map extends React.Component {
                             <View style={styles.marker} />
                         </View>
                     </MapView.Marker>
-
-
                 </MapView>
-
             </View>
         );
     }
@@ -68,12 +62,9 @@ export default class Map extends React.Component {
             lat: coord.latitude,
             lon: coord.longitude,
         });
-        console.log(coord.latitude);
-        console.log(coord.longitude);
     };
 
     geo_error = (e) => {
-        console.log('klarte ikke kartgreia');
         console.log(`Feilmelding: ${e}`);
     };
 

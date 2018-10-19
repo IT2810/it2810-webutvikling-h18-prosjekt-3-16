@@ -63,7 +63,7 @@ Om noen lurer på hvor vi fant 3 parts bibliotek ta en titt på nettsidene under
 fordi den gir oss mye funksjonalitet som vi enkelt kan bruke videre. Vi har ikke brukt denne funksjonaliteten videre i MVP som vi 
 har laget. 
 
--google maps fra https://github.com/react-community/react-native-maps
+- google maps fra https://github.com/react-community/react-native-maps
 
 
 Arbeidsflyt - Git, github, issues, etc.  

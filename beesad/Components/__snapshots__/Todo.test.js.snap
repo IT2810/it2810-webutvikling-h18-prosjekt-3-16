@@ -13,8 +13,7 @@ exports[`renders correctly 1`] = `
       Object {
         "alignItems": "center",
         "backgroundColor": "magenta",
-        "borderBottomColor": "#ddd",
-        "borderBottomWidth": 10,
+        "flexDirection": "row",
         "justifyContent": "center",
       }
     }
@@ -26,18 +25,70 @@ exports[`renders correctly 1`] = `
       style={
         Object {
           "color": "white",
-          "fontSize": 18,
+          "fontSize": 24,
           "padding": 26,
         }
       }
     >
-       - NOTATER - 
+       
+      
+
+       VAPID Goals 
     </Text>
+    <View
+      accessibilityComponentType="button"
+      accessibilityTraits={
+        Array [
+          "button",
+        ]
+      }
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#007AFF",
+                "fontSize": 18,
+                "padding": 8,
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          info
+        </Text>
+      </View>
+    </View>
   </View>
   <View
     style={
       Object {
+        "backgroundColor": "#696969",
         "bottom": 0,
+        "height": 50,
         "left": 0,
         "position": "absolute",
         "right": 0,
@@ -53,11 +104,11 @@ exports[`renders correctly 1`] = `
       styke={
         Object {
           "alignSelf": "stretch",
-          "backgroundColor": "#fff",
+          "backgroundColor": "#696969",
           "borderTopColor": "#ededed",
           "borderTopWidth": 50,
           "bottom": 70,
-          "color": "#fff",
+          "color": "#696969",
           "padding": 20,
         }
       }

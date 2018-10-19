@@ -5,15 +5,19 @@ import {
   View,
   TouchableOpacity
  } from 'react-native';
-
+//class for handling all notes in TODO.js. 
 export default class Note extends React.Component {
   render() {
     return (
+      //unique ID for every note so that TODO.js can seperate them.
       <View key={this.props.keyvalue} style={styles.note}>
-
+      //the date of the note you have created.
         <Text style={styles.noteText}> {this.props.val.date}</Text>
+        // The text of the note you have created
         <Text style={styles.noteText}> {this.props.val.note}</Text>
+        //this is the deletion mechanisme for a note.
       <TouchableOpacity onPress={this.props.deleteMethod} style={styles.noteDelete}>
+      //A way to make the button visible and easily understandable
         <Text style={styles.noteDeleteText}> D </Text>
         </TouchableOpacity>
 

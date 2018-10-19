@@ -5,12 +5,29 @@ import {
     View,
     TextInput,
     ScrollView,
-    TouchableOpacity
+    TouchableOpacity,
+    geolocation,
 } from 'react-native';
 
 import MapView from 'react-native-maps';
 
+
+const options = {
+    enableHighAccuracy: true,
+    maximumAge: 0
+};
+
 export default class Map extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            lat: 63.4213704,
+            lon: 10.3947577,
+        };
+    }
+    componentDidMount(){
+        navigator.geolocation.getCurrentPosition(this.geo_success, this.geo_error, options);
+    }
     render() {
         return (
             <View style={styles.container}>
@@ -26,8 +43,8 @@ export default class Map extends React.Component {
                 >
                     <MapView.Marker
                         coordinate={{
-                            latitude: 63.4213704,
-                            longitude: 10.3947577,
+                            latitude: this.state.lat,
+                            longitude: this.state.lon,
                         }}
                     >
                         <View style={styles.radius}>
@@ -41,6 +58,22 @@ export default class Map extends React.Component {
             </View>
         );
     }
+
+    geo_success = (pos) => {
+        const coord = pos.coords;
+        this.setState({
+            lat: coord.latitude,
+            lon: coord.longitude,
+        });
+        console.log(coord.latitude);
+        console.log(coord.longitude);
+    };
+
+    geo_error = (e) => {
+        console.log('klarte ikke kartgreia');
+        console.log(`Feilmelding: ${e}`);
+    };
+
 };
 
 const styles = StyleSheet.create({

@@ -5,6 +5,7 @@ import { Icon } from 'react-native-elements';
 import Todo from "./Todo";
 import Home from "./Home";
 import Calender from "./Calender";
+import Map from "./Map";
 
 
 /*list of icons can be found here: https://material.io/tools/icons/?style=baseline */
@@ -39,6 +40,18 @@ const RootStack = createBottomTabNavigator({
                 tabBarIcon: ({tintColor}) => (
                     <Icon
                         name="event"
+                        color={tintColor}
+                        size={24}
+                    />
+                )
+            })
+        },
+        Map: {
+            screen: Map,
+            navigationOptions: () => ({
+                tabBarIcon: ({tintColor}) => (
+                    <Icon
+                        name="map"
                         color={tintColor}
                         size={24}
                     />

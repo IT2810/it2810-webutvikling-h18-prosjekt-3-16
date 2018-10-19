@@ -7,8 +7,8 @@ import Home from "./Home";
 import Calender from "./Calender";
 import Map from "./Map";
 
-
 /*list of icons can be found here: https://material.io/tools/icons/?style=baseline */
+//creates a naviagtion bar at the bottom of the app. switches screen when button is pressed
 const RootStack = createBottomTabNavigator({
         Home: {
             screen: Home,

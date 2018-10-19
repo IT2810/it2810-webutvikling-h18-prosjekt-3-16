@@ -3,7 +3,6 @@ import { StyleSheet, Text, View} from 'react-native';
 import {createBottomTabNavigator} from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import Todo from "./Todo";
-import Tododo from "./Tododo";
 import Home from "./Home";
 import Calender from "./Calender";
 import reactNativePedometer from "./Pedometer"

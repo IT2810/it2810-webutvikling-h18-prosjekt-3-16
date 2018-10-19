@@ -15,6 +15,7 @@
   "dependencies": {
     "babel-preset-env": "^1.7.0",
     "expo": "^30.0.1",
+    "jest-cli": "^23.6.0",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "react-native-calendars": "^1.21.0",

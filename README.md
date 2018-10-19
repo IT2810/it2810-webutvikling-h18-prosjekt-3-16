@@ -25,8 +25,11 @@ I dokumentasjons mappen finner en drafts til komponent layout og arkitektur.
         - Home.js
         - Todo.js
             - Note.js
+            - myAsyncStorage.js
         - Calender.js
         - Pedometer.js
+        - Map.js
+        
 
 Vi planlegger å ha en router i app eller i en navigasjonskomponent som tar seg av visningen av forskjellige hoved komponenter. Vi kan da enkelt legge til flere hovedkomponenter etter behov, eller kutt ut noen hvis vi ikke har tid til å lage dem.
 Hver hovedkomponent håndterer oppdatering av view selv, samt lagring og henting av data fra minnet.
@@ -49,9 +52,11 @@ Valg av bibloteker
 ---------------------
 //skal dokumenteres i tutorials form slik at andre lett kan lære av eksempelet dere lager 
 - navTab
+
 - react-native-calendar fra https://github.com/wix/react-native-calendars. Dette virket som et godt valg for bruk av kalendar 
 fordi den gir oss mye funksjonalitet som vi enkelt kan bruke videre. Vi har ikke brukt denne funksjonaliteten videre i MVP som vi 
 har laget. 
+
 - Pedometer
 
 Valg av API

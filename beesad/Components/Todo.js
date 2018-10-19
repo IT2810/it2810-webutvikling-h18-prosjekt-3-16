@@ -5,9 +5,11 @@ import {
   Text,
   View,
   TextInput,
+  Button,
   ScrollView,
   TouchableOpacity,
   AsyncStorage,
+  Linking,
  } from 'react-native';
 
 export default class Todo extends React.Component {
@@ -33,7 +35,9 @@ export default class Todo extends React.Component {
       <View style={styles.container}>
 
         <View style={styles.header}>
-          <Text style={styles.headerText}> - NOTATER - </Text>
+          <Text style={styles.headerText}> {"\n"} VAPID Goals </Text>
+          <Button title="info" onPress={ ()=>{ Linking.openURL('https://wealthandrisk.nz/vapid-goals/')}} />
+
         </View>
 
         <ScrollView style={styles.scrollContainer} >
@@ -97,30 +101,31 @@ const styles = StyleSheet.create({
       backgroundColor: "magenta",
       alignItems: "center",
       justifyContent: "center",
-      borderBottomWidth:10,
-      borderBottomColor: "#ddd",
+      flexDirection: "row",
     },
   headerText: {
       color: "white",
-      fontSize:18,
+      fontSize:24,
       padding:26,
     },
   scrollContainer: {
       flex:1,
-      marginBottom:100,},
+      marginBottom: 50,
+  },
   footer : {
       position: "absolute",
       bottom:0,
       left:0,
       right:0,
-      zIndex:10
-
+      zIndex:10,
+      height:50,
+      backgroundColor: "#696969",
     },
   textInput : {
       alignSelf:"stretch",
-      color:"#fff",
+      color:"#696969",
       padding: 20,
-      backgroundColor: "#fff",
+      backgroundColor: "#696969",
       borderTopWidth: 50  ,
       borderTopColor:"#ededed",
       bottom: 70,

@@ -22,7 +22,7 @@ const RootStack = createBottomTabNavigator({
                 )
             })
         },
-        Todo: {
+        Goals: {
             screen: Todo,
             navigationOptions: () => ({
                 tabBarIcon: ({tintColor}) => (

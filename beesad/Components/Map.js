@@ -8,16 +8,23 @@ import {
     TouchableOpacity
 } from 'react-native';
 
+import MapView from 'react-native-maps';
+
 export default class Map extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.largeNotice}>
-                    lol text
-                </Text>
-                <Text style={styles.instructions}>
-                    Just keep your phone in your pocket and go for a walk!
-                </Text>
+
+                <MapView
+                    style={styles.map}
+                    initialRegion={{
+                        latitude: 63.4213704,
+                        longitude: 10.3947577,
+                        latitudeDelta: 0.0922,
+                        longitudeDelta: 0.0421,
+                    }}
+                />
+
             </View>
         );
     }
@@ -29,6 +36,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
+    },
+    map: {
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
+      position: 'absolute',
     },
     welcome: {
         fontSize: 20,

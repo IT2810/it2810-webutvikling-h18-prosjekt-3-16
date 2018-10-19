@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../assets/img/beesad_logo.jpg",
+      }
+    }
+    style={
+      Object {
+        "height": 200,
+        "width": 200,
+      }
+    }
+  />
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 40,
+      }
+    }
+  >
+    BeeSad
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    Welcome to your journey into sadness and despair. With this app we will motivate you too live the most miserable life you kan possible imagine. 
+    
+
+    The application is not quite finished, we did some user testing and got depressed. But feel free to send a pull request on github.
+  </Text>
+</View>
+`;

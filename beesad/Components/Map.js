@@ -21,6 +21,8 @@ export default class Map extends React.Component {
             lon: 10.3947577,
         };
     }
+
+    // geo functions here run returns a position object and passes it to geo_success
     componentDidMount(){
         navigator.geolocation.getCurrentPosition(this.geo_success, this.geo_error, options);
     }
@@ -34,7 +36,7 @@ export default class Map extends React.Component {
                 <MapView
                     style={styles.map}
                     initialRegion={{
-                        // this lat and long will be the once in the init state if not changed.
+                        // Sets where the map is set in init state
                         latitude: this.state.lat,
                         longitude: this.state.lon,
                         latitudeDelta: 0.0922,
@@ -43,6 +45,7 @@ export default class Map extends React.Component {
                 >
                     <MapView.Marker
                         coordinate={{
+                            // sets and updates the location marker (blue dot)
                             latitude: this.state.lat,
                             longitude: this.state.lon,
                         }}
@@ -56,6 +59,7 @@ export default class Map extends React.Component {
         );
     }
 
+    // geo_succsess recieves geo object and updates state
     geo_success = (pos) => {
         const coord = pos.coords;
         this.setState({
@@ -64,12 +68,14 @@ export default class Map extends React.Component {
         });
     };
 
+    // if geo function fails, then this function is run
     geo_error = (e) => {
         console.log(`Feilmelding: ${e}`);
     };
 
 };
 
+// Styles used:
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -77,6 +83,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#F5FCFF',
     },
+    // Setting the map to fullscreen:
     map: {
       left: 0,
       right: 0,
@@ -84,6 +91,8 @@ const styles = StyleSheet.create({
       bottom: 0,
       position: 'absolute',
     },
+    // radius and marker sets up a custom marker to mimic the blue dot with a circle around it
+    // that we all recognise as our own location
     radius: {
         height: 50,
         width: 50,
@@ -103,15 +112,5 @@ const styles = StyleSheet.create({
         borderRadius: 20 / 2,
         overflow: 'hidden',
         backgroundColor: '#007AFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
     },
 });

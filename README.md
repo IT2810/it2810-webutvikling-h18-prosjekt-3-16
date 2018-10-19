@@ -55,16 +55,16 @@ Pedometer måler antall skritt en har gått. Vi fikk aldri denne til å fungere,
 
 Valg av bibloteker og API
 ---------------------
-//skal dokumenteres i tutorials form slik at andre lett kan lære av eksempelet dere lager 
-- navTab
+Om noen lurer på hvor vi fant 3 parts bibliotek ta en titt på nettsidene under. Der finner dere info om implementasjon og bruk. 
+
+- navTab fra https://reactnavigation.org/docs/en/tab-based-navigation.html 
 
 - react-native-calendar fra https://github.com/wix/react-native-calendars. Dette virket som et godt valg for bruk av kalendar 
 fordi den gir oss mye funksjonalitet som vi enkelt kan bruke videre. Vi har ikke brukt denne funksjonaliteten videre i MVP som vi 
 har laget. 
 
--google maps
+-google maps fra https://github.com/react-community/react-native-maps
 
-- Pedometer
 
 Arbeidsflyt - Git, github, issues, etc.  
 -----------------------------------------
@@ -150,76 +150,3 @@ Gjennom dette prosjektet har vi oppfylt følge læringsmål.
 - Kunnskaper og ferdigheter i å håndtere persistent tilstand (lagring av data) på enheten
 - Videregående kompetanse i bruk av git og dokumentasjon/styring av utviklingsoppgaver med issues. 
 - Ferdigheter i gruppearbeid med fokus på samarbeid og læring, fordeling og koordinering av arbeidsoppgaver, utvikling og samarbeidende utvikling med git.
-
-
-
--------------------------------------krav til dokumetasjon------------------------------------
-- Prosjektet dokumenteres med en README.md i git repositoriet.
-- Dokumentasjonen skal diskutere, forklare og vise til alle de viktigste valgene og løsningene som gruppa gjør (inklusive valg av komponenter og api).
-- Koden skal være lettlest og godt strukturert slik at den er lett å sette seg inn i. Bruk av kommentarer skal være tilpasset at eksterne skal inspisere koden.
-- Gruppas valg av teknologi som utforskes (jmfr krav til innhold) skal dokumenteres i tutorials form slik at andre lett kan lære av eksempelet dere lager (dvs. gi en liten introduksjon til hva og hvordan).
-- Gruppa skal oppsummere den enkeltes bidrag i prosjektet i en egen fil som leveres i BB (dette er personopplysninger som ingen vil at skal ligge på git ;-)
-
-
-
--------------------------------------delete below before release--------------------------
-
---------------bb innlevering
-Hvem har gjort hva
-
-Tord
-- Navigasjon - Routing.js
-- Startsiden - Home.js
-- Kalender - Calender.js
-- Jest tester
-- Skrevet dokumentasjon
-
-Endre
-- Todo - Todo.js og Note.js
-- Asynclagring
-
-Øyvind
-- Skritteller - Pedometer.js
-- Kart med GPS - Map.js
-
---------------Short List:
-
-Tema, formål
-
-finne gode 3party libaries
-
-
-Innhold og funksjonalitet:
-
-Kontakter, avtaler, todos, oppgaver, kalender(?), registring av personlige mål og resultater,  
-
-Tilstand vha AsyncStorage
-
-GPS/Skrittteller/direktek kommunikasjon med andre nheter
-
-Krav til teknologier:
-
-REACT NATVIE:
-Expo : http://expo.io
-Async Storage
-Tredjepartskomponenter/bibliotek
-
-Platformuavhengig ( IOS og Andriod)
-
-Bruk av Git, Koding:
-
-best practise
-Git i webutvikling
-issues
-Commits markert til issues
-
-
-Testing:
-Jest og Enzyme, og skal være godt og systematisk testet
-
-Doukemntasjon:
-README.md
-Vise viktige valg
-Kommentarer
-Tutorial så andre kan bruke det ( hva og hvordan)
-dokument den enkeltes bidrag

@@ -20,17 +20,39 @@ Arkitektur
 Vi har valgt en bred arkitektur som tilater mye paralell funksjonalitet. Vi mener dette passer best til oppgaven som er gitt fordi, hovedfokus i oppgaven er ikke å implementere mest mulig funksjonalitet da er det en fordel å ha det modulært. 
 I dokumentasjons mappen finner en drafts til komponent layout og arkitektur.
 
-//komponent-tre 
+- App.js
+    - Router.js
+        - Home.js
+        - Todo.js
+            - Note.js
+        - Calender.js
+        - Pedometer.js
 
 Vi planlegger å ha en router i app eller i en navigasjonskomponent som tar seg av visningen av forskjellige hoved komponenter. Vi kan da enkelt legge til flere hovedkomponenter etter behov, eller kutt ut noen hvis vi ikke har tid til å lage dem.
 Hver hovedkomponent håndterer oppdatering av view selv, samt lagring og henting av data fra minnet.
 
+Slutt funksjonalitet
+---------------------------
+Vi har en applikasjon med bottomBarNavigation hvor en enkelt kan ligge til "sceens" etter behov. Dette håndteres av router.js. 
+Hver sceene er sin egen komponent med child komponenter hvor det trengs. 
+
+Home er en velkommstide med noe tekst som forklarer hva applikasjonen er.
+
+I Todo kan en opprette notater og slette dem. Hvert notat element er et note.js element som ligges til i en liste. 
+
+Calender er implementasjon av tredjeparts bibloteket react-native-calenderen. Den viser hvilken dato det er og console logger 
+press og longpress av datoer. Vi har ikke implementert events i kalenderen enda.
+
+Pedometer måler antall skritt en har gått.
+
 Valg av bibloteker
 ---------------------
 //skal dokumenteres i tutorials form slik at andre lett kan lære av eksempelet dere lager 
-x
-y
-z
+- navTab
+- react-native-calendar fra https://github.com/wix/react-native-calendars. Dette virket som et godt valg for bruk av kalendar 
+fordi den gir oss mye funksjonalitet som vi enkelt kan bruke videre. Vi har ikke brukt denne funksjonaliteten videre i MVP som vi 
+har laget. 
+- Pedometer
 
 Valg av API
 ---------------
@@ -41,26 +63,42 @@ z
 
 Arbeidsflyt - Git, github, issues, etc.  
 -----------------------------------------
-//hva vi har brukt og hvordan
+Vi bruker Github med issues, branches og pull requests. Vi begynte prosjektet med å diskutere oppgaven og tegne opp et røft design av 
+applikasjonen. Disse bildene ligger i documentation mappen på repoet. 
 
-Github
+Deretter laget vi issues til all ønsket og nødvendig funksjonalitet som dekket alle kriteriene i oppgaven. De issusene som er nødvendig for en mvp ble
+taget med dette. På github kan en enkelt assigne seg selv eller andre til et issue og se hva andre jobber med. En har også en god oversikt over hva som er 
+igjen av ønsket funksjonalitet og MVP.
 
-Issues
+Vi bruker master som produksjons nivået av appliksjonen. Dette skal alltid være fungerene. Under har vi dev som vi bruker til 
+integrasjonstesting og bugfixing. Ut i fra dev igjen har vi brancher der vi utvikler enheter og tester dem. Slik sørger man for at 
+en kan utvikle ny funksjonalitet parallelt uten konflikter. Vi har også alltid en fuksjonell master brach som har blitt enhetstestet og 
+integrasjonstestet i branshene under seg. 
 
-Pull requests 
+Ingen får lov til å merge inn i dev eller master. Vi bruker pull requests i githus. Personen som har laget koden oppretter pull requesten, 
+for at den deretter skal bli godkjennt av andre. Når den er godkjent, i vårt tilfelle bestemte vi at det var nok med en godkjenneing, så kunne den
+merges av eier. 
 
-Kommentarer i koden .... 
+I tillegg til denne dokumentasjonen har vi kommentert koden slik at det skal bli så forståelig som mulig. 
 
 
-Testing 
+Testing med Jest
 ------------------
-//prosessen
+Vi har snapshot tester av alle hovedkomponentene. Det vil si at en sjekker at disse komponentene rendrer opp mot en tidligere mal av UI-en.
+Disse implemtenterte vi etter at vi fikk funksjonaliteten i hver kompenent til å fungerer, og oppdaterte dem når det var nødvendig.
+Vi anser at disse testene dekker alle enhet(unit) i prosjektet og er tilstrekkelig til å dekke kriteriet:
 
-Jest ....
-Enzyme ....
+- Prosjektet skal testes med Jest og vise og dokumentere god og systematisk enhetstesting.
 
-//har vi noe papertrail å viste til??????
+I prosjekt 3 er det ikke et læringsmål om å lære seg jest eller testing. Vi anser dermed testingen som ferdig, på dette punket ettersom kriteriet er oppfylt.
 
+Dette er en avgjørelse vi har kommet til fordi jest ikke funker til en dritt. Bruk av jest uten enzyme med react-native er ikke meningen. Det er dårlig støtte for 3 parts komponenter og vi kommer ikke til
+å lage bable templates for å få testet disse npm modulene med jest. 
+Vi har heller ikke brukt mockup functions, dette er noe vi kunne gjort for å få 100% test covrage. Men selv med dette oppnår vi ikke en tilfredstillene stander
+på testene våre. Verken på unit, integrasjons eller system som en helet. Så vi har ikke prioritert disse type testene i prosjektet. Vi ser ikke at 
+det er en naturlig måte å bruke teknologien vi har fått utdelt. Det hadde for eksempel vært mer relevant med CI i github eller gitlab. 
+
+Helt seriøst føkk jest liksom. 
 
 Læringsmål
 -------------------
@@ -86,9 +124,23 @@ Ferdigheter i gruppearbeid med fokus på samarbeid og læring, fordeling og koor
 
 
 
--------------------------------------to do list delete before release--------------------------
+-------------------------------------delete below before release--------------------------
 
-Short List:
+--------------bb innlevering
+Hvem har gjort hva
+Tord
+- Navigasjon - Routing.js
+- Startsiden - Home.js
+- Kalender - Calender.js
+- Jest tester
+- Skrevet dokumentasjon
+Endre
+- Todo - Todo.js og Note.js
+- Asynclagring
+Øyvind
+-Skritteller - Pedometer.js
+
+--------------Short List:
 
 Tema, formål
 

@@ -6,7 +6,8 @@ import {
   View,
   TextInput,
   ScrollView,
-  TouchableOpacity
+  TouchableOpacity,
+  AsyncStorage,
  } from 'react-native';
 
 export default class Todo extends React.Component {
@@ -16,7 +17,12 @@ export default class Todo extends React.Component {
       noteArray: [],
       noteText:"",
     }
+    AsyncStorage.getItem("state").then((myState)=>{
+      this.setState(JSON.parse(myState));
+    });
+
   }
+
   render() {
     let notes = this.state.noteArray.map((val,key) => {
       return <Note key={key} keyval={key} val={val}
@@ -45,7 +51,7 @@ export default class Todo extends React.Component {
 
            </TextInput>
         </View>
-        <TouchableOpacity onPress={this.addNote.bind(this)} style={styles.addButton}>
+        <TouchableOpacity onChangeText={this.saveData()} onPress={this.addNote.bind(this)} style={styles.addButton}>
           <Text style = {styles.addButtonText}>+</Text>
         </TouchableOpacity>
       </View>
@@ -53,6 +59,11 @@ export default class Todo extends React.Component {
     );
 
     }
+    saveData(){
+      AsyncStorage.setItem("state",JSON.stringify(this.state));
+    }
+
+
     addNote() {
       if (this.state.noteText){
 
